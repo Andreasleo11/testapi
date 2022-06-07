@@ -1,1 +1,1 @@
-web: gunicorn testapi:app
+web: gunicorn testapiflask:app
