@@ -22,8 +22,9 @@ def matching():
     clusterfinal = clustertwo[clustertwo.DistancePoint > 0.09]
     ecm = rl.ECMClassifier(binarize=0)
     match = ecm.fit_predict(clusterfinal)
+    result = print(match)
 
-    return match
+    return result
 
 if __name__ == "__main__":
     app.run()
