@@ -26,7 +26,8 @@ def matching():
     match = ecm.fit_predict(clusterfinal)
     # result = match.to_series().apply(lambda x: '{0}-{1}'.format(*x))
     result = list(match)
-    return result
+    resulttup = (*result, )
+    return resulttup
 
 if __name__ == "__main__":
     app.run()
