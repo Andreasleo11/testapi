@@ -24,7 +24,8 @@ def matching():
     clusterfinal = clustertwo[clustertwo.DistancePoint > 0.09]
     ecm = rl.ECMClassifier(binarize=0)
     match = ecm.fit_predict(clusterfinal)
-    result = match.to_series().apply(lambda x: '{0}-{1}'.format(*x))
+    # result = match.to_series().apply(lambda x: '{0}-{1}'.format(*x))
+    result = match.to_string()
     return result
 
 if __name__ == "__main__":
