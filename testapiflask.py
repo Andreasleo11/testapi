@@ -25,8 +25,9 @@ def matching():
     ecm = rl.ECMClassifier(binarize=0)
     match = ecm.fit_predict(clusterfinal)
     # result = match.to_series().apply(lambda x: '{0}-{1}'.format(*x))
-    result = match.index.values
-    return result
+    result = match.reset_index()
+    final = result.set_index(['usermatching', 'userdatabase'])
+    return final
 
 if __name__ == "__main__":
     app.run()
