@@ -7,9 +7,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def matching():
-    df = pd.read_excel(R'E:\SKRIPSI\bananaapps\testapi\UserAndreGorLokasSari.xlsx')
-    test = print(df)
-    return test
+    # df = pd.read_excel(R'E:\SKRIPSI\bananaapps\testapi\UserAndreGorLokasSari.xlsx')
+    # test = print(df)
+    return "TEST"
     # df1 = pd.read_excel(r'E:\SKRIPSI\bananaapps\testapi\UserDatabase.xlsx')
     # indexer = rl.Index()
     # indexer.full()
