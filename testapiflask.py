@@ -27,9 +27,7 @@ def matching():
     # result = match.to_series().apply(lambda x: '{0}-{1}'.format(*x))
     result = list(match)
     resulttup = tuple(result)
-    for x in resulttup:
-        pl = ("".join(x))
-    # pl = ','.join(resulttup)
+    pl = ','.join(''.join(resulttup))
     return pl
 
 if __name__ == "__main__":
