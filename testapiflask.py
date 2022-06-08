@@ -2,6 +2,7 @@ from cgi import test
 from flask import Flask
 import recordlinkage as rl
 import pandas as pd
+import openpyxl 
 import gunicorn
 
 app = Flask(__name__)
