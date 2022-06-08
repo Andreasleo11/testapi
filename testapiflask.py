@@ -25,7 +25,7 @@ def matching():
     ecm = rl.ECMClassifier(binarize=0)
     match = ecm.fit_predict(clusterfinal)
     # result = match.to_series().apply(lambda x: '{0}-{1}'.format(*x))
-    result = match.index.tolist()
+    result = match.index.values
     return result
 
 if __name__ == "__main__":
