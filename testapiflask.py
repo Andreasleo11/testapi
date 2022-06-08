@@ -23,7 +23,7 @@ def matching():
     ecm = rl.ECMClassifier(binarize=0)
     match = ecm.fit_predict(clusterfinal)
     result = print(match)
-    return result
+    return "result"
 
 if __name__ == "__main__":
     app.run()
