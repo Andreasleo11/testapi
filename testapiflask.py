@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def matching():
-    df = pd.read_excel(r"E:\\SKRIPSI\\bananaapps\\testapi\\UserAndreGorLokasSari.xlsx")
-    df1 = pd.read_excel(r"E:\\SKRIPSI\\bananaapps\\testapi\\UserDatabase.xlsx")
+    df = pd.read_excel(r"E:SKRIPSIbananaappstestapiUserAndreGorLokasSari.xlsx")
+    df1 = pd.read_excel(r"E:SKRIPSIbananaappstestapiUserDatabase.xlsx")
     indexer = rl.Index()
     indexer.full()
     pairs = indexer.index(df,df1)
