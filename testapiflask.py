@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def matching():
-    df1 = pd.read_excel(r"E:\SKRIPSI\bananaapps\testapi\UserAndreGorLokasSari.xlsx")
+    df1 = pd.read_excel(r"E:\SKRIPSI\bananaapps\testapi\UserAndreGorLokasSari")
     df2 = pd.read_excel(r"E:\SKRIPSI\bananaapps\testapi\UserDatabase")
     indexer = rl.Index()
     indexer.full()
@@ -23,7 +23,6 @@ def matching():
     ecm = rl.ECMClassifier(binarize=0)
     match = ecm.fit_predict(clusterfinal)
     result = print(match)
-
     return result
 
 if __name__ == "__main__":
