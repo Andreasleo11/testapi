@@ -1,3 +1,4 @@
+from cgi import test
 from flask import Flask
 import recordlinkage as rl
 import pandas as pd
@@ -7,9 +8,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def matching():
-    # df = pd.read_excel(R'E:\SKRIPSI\bananaapps\testapi\UserAndreGorLokasSari.xlsx')
-    # test = print(df)
-    return "TEST"
+    df = pd.read_excel(r'E:\SKRIPSI\bananaapps\testapi\UserAndreGorLokasSari.xlsx')
+    test = list(df)
+    return test
     # df1 = pd.read_excel(r'E:\SKRIPSI\bananaapps\testapi\UserDatabase.xlsx')
     # indexer = rl.Index()
     # indexer.full()
