@@ -21,7 +21,7 @@ def matching():
     features = compare_cl.compute(pairs, df, df1)
     clusterone = features[features.AgePoint > 0.4]
     clustertwo = clusterone[clusterone.SportTypePoint > 0]
-    clusterfinal = clustertwo[clustertwo.DistancePoint > 0.09]
+    clusterfinal = clustertwo[clustertwo.DistancePoint > 0.2]
     ecm = rl.ECMClassifier(binarize=0)
     match = ecm.fit_predict(clusterfinal)
     # result = match.to_series().apply(lambda x: '{0}-{1}'.format(*x))
