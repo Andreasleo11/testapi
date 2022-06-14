@@ -1,5 +1,6 @@
 from cgi import test
 from flask import Flask
+from flask import jsonify
 import recordlinkage as rl
 import pandas as pd
 import openpyxl 
@@ -9,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/posts")
 def hello_world():
-   return "hello world"
+   return jsonify("hello world")
 
 @app.route("/")
 def matching():
