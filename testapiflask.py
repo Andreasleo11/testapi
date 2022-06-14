@@ -7,7 +7,7 @@ import gunicorn
 
 app = Flask(__name__)
 
-@app.route("/posts")
+@app.route("/")
 def matching():
     df = pd.read_excel('UserAndreGorLokasSari.xlsx')
     df1 = pd.read_excel('UserDatabase.xlsx')
@@ -30,6 +30,10 @@ def matching():
     # pl = ','.join(''.join(x) for x in resulttup)
     pl = ','.join(map(str, resulttup))
     return pl
+
+@app.route("/posts")
+def hello_world():
+   return "hello world"
 
 if __name__ == "__main__":
     app.run()
