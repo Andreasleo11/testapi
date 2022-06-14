@@ -7,11 +7,11 @@ import gunicorn
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/posts")
 def hello_world():
    return "hello world"
 
-@app.route("/posts")
+@app.route("/")
 def matching():
     df = pd.read_excel('UserAndreGorLokasSari.xlsx')
     df1 = pd.read_excel('UserDatabase.xlsx')
