@@ -30,11 +30,12 @@ def matching():
     ecm = rl.ECMClassifier(binarize=0)
     match = ecm.fit_predict(clusterfinal)
     # result = match.to_series().apply(lambda x: '{0}-{1}'.format(*x))
-    result = list(match)
-    resulttup = tuple(result)
+    rematch = match.get_level_values(1)
+    rematch = list(rematch)
+    resulttup = tuple(rematch)
     # pl = ','.join(''.join(x) for x in resulttup)
     pl = ','.join(map(str, resulttup))
-    return pl
+    return jsonify(pl)
 
 
 if __name__ == "__main__":
