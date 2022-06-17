@@ -11,11 +11,11 @@ import gunicorn
 
 app = Flask(__name__)
 
-@app.route("/posts")
+@app.route("/")
 def hello_world():
    return jsonify("hello world")
 
-@app.route("/", methods=['POST'])
+@app.route("/posts", methods=['POST'])
 def matching():
     print(request.get_json())
     # data = request.form
