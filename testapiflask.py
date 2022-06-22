@@ -40,17 +40,17 @@ def hello_world():
 def matching():
     # print(request.get_json())
     data = request.get_json()
-    inputdata = pd.DataFrame(data)
-    df = inputdata.head(1)
-    df1 = inputdata.iloc[1:]
+    df = pd.DataFrame(data)
+    df1 = df.head(1)
+    df2 = df.iloc[1:]
     indexer = rl.Index()
     indexer.full()
-    pairs = indexer.index(df,df1)
+    pairs = indexer.index(df1,df2)
     compare_cl = rl.Compare()
     compare_cl.exact("SportType","SportType", label="SportTypePoint")
     compare_cl.numeric("Age","Age",scale=3,label="AgePoint")
     compare_cl.geo("X","Y","X","Y", method='exp', label="DistancePoint")
-    features = compare_cl.compute(pairs, df, df1)
+    features = compare_cl.compute(pairs, df1, df2)
     clusterone = features[features.AgePoint > 0.4]
     clustertwo = clusterone[clusterone.SportTypePoint > 0]
     clusterfinal = clustertwo[clustertwo.DistancePoint > 0.2]
