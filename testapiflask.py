@@ -39,6 +39,9 @@ def hello_world():
 @app.route("/posts", methods=['POST'])
 def matching():
     print(request.get_json())
+    data = request.get_json()
+    df = pd.read_json(data[0])
+    # df1 = pd.read_json()
     # df = pd.read_excel('UserAndreGorLokasSari.xlsx')
     # df1 = pd.read_excel('UserDatabase.xlsx')
     # indexer = rl.Index()
@@ -61,7 +64,7 @@ def matching():
     # # pl = ','.join(''.join(x) for x in resulttup)
     # pl = ','.join(map(str, resulttup))
     # return jsonify(pl)
-    return(request.get_json())
+    return df
 
 
 
