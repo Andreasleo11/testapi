@@ -62,7 +62,8 @@ def matching():
     resulttup = tuple(rematch)
     # pl = ','.join(''.join(x) for x in resulttup)
     pl = ','.join(map(str, resulttup))
-    return jsonify(pl)
+    # return jsonify(pl)
+    return print(pl)
 
 
 
