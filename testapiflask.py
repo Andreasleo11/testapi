@@ -63,7 +63,7 @@ def matching():
     # pl = ','.join(''.join(x) for x in resulttup)
     pl = ','.join(map(str, resulttup))
     # return jsonify(pl)
-    return print(pl)
+    return pl
 
 
 
