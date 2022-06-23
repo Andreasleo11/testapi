@@ -40,7 +40,7 @@ def hello_world():
 def matching():
     # print(request.get_json())
     data = request.get_json()
-    df = pd.DataFrame(eval(data))
+    df = pd.DataFrame(data)
     df1 = df.head(1)
     df2 = df.iloc[1:]
     indexer = rl.Index()
