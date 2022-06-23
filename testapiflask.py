@@ -39,6 +39,7 @@ def hello_world():
 @app.route("/posts", methods=['POST'])
 def matching():
     # print(request.get_json())
+    request.get_json()
     data = request.get_json()
     df = pd.DataFrame(data)
     df1 = df.head(1)
